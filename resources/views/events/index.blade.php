@@ -87,7 +87,7 @@
                                         <div>
                                             <a href="{{ route('events.edit', $event->id) }}"
                                                 class="btn btn-primary">Edit</a>
-                                            <form action="{{ route('events.destroy', [$event->id, $event->id]) }}"
+                                            <form action="{{ route('events.destroy', $event->id) }}"
                                                 method="post">
                                                 @csrf
                                                 @method('delete')
