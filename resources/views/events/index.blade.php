@@ -97,6 +97,7 @@
                                     </div>
                                 </li>
                             @endforeach
+                            {{ $events->links() }}
                         </ul>
                     @endif
                 </div>
