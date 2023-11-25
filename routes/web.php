@@ -18,11 +18,7 @@ use Illuminate\Support\Facades\Redis;
 */
 // Create a route to handle API requests for creating calendar events
 
-Route::get('/', function() {
-    Cache::put('HAmody', 'sdad');
-    $e = Cache::get('HAmody');
-    dd($e);
-});
+
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/create', [EventController::class, 'create'])->name('events.create');
 Route::post('/events', [EventController::class, 'store'])->name('events.store');
